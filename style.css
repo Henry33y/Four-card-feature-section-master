@@ -1,0 +1,133 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*,::before,::after{
+    box-sizing: border-box;
+}
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --blue-low:hsla(212, 86%, 64%,.2);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --font-size: 15px;
+}
+html{
+    width: 100vw;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-size);
+    margin: 0;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+h1,h2{
+    color: var(--very-dark-blue);
+}
+p{
+    color: var(--grayish-blue);
+    font-size: 0.85em;
+}
+header{
+    text-align: center;
+    margin-bottom: 2em;
+}
+header span{
+    font-weight: 200;
+}
+header p{
+    width: 450px;
+}
+
+.flex-container{
+    display: flex;
+    max-width: 65em;
+    gap: 1.5em;
+    
+}
+.flex-col1{
+    display: flex;
+    align-items: center;
+    width: calc(100%/3);
+    
+}
+.flex-col2{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: column;
+    row-gap: 1.5em;
+    width: calc(100%/3);
+
+}
+.flex-col3{
+    display: flex;
+    align-items: center;
+    width: calc(100%/3);
+    
+}
+.flex-item{
+    padding: 1.2em;
+    position: relative;
+    width: 100%;
+    height: 230px;
+    border-radius: 5px;
+    border-top: 5px solid;
+    box-shadow: 0px 5px 10px 2px var(--blue-low);
+}
+.flex-item img{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.flex-item h2{
+    font-size: 1.4em;
+}
+.Item1{
+    border-color: var(--cyan);
+}
+.Item2{
+    border-color: var(--red);
+}.Item3{
+    border-color: var(--orange);
+}.Item4{
+    border-color: var(--blue);
+}
+.attribution{
+    display: none;
+}
+@media (max-width:700px){
+    .flex-container{
+        flex-direction: column;
+        width: 95%;
+        
+    }
+    .flex-col1{
+        width: 100%;
+    }
+    .flex-col2{
+        width: 100%;
+
+    }
+    .flex-col3{
+        width: 100%;
+    }
+}
+@media (max-width:500px){
+    h1{
+        font-size: 1.5em;
+    }
+    p{
+        display: inline;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 0.9em;
+    }
+    .flex-container{
+        width: 95%;
+    }
+}
